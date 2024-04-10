@@ -5,15 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SzamKirakoWPF"
         mc:Ignorable="d"
-        Title="SzámKirakó.app" Height="500" Width="500">
+        Title="SzámKirakó.app" Height="650" Width="600">
     <Grid x:Name="grKulso">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button x:Name="btnKeveres" Width="150" Height="25" Content="Keverés"></Button>
+        <Button x:Name="btnKeveres" Width="150" Height="25" Content="Keverés" Click="btnKeveres_Click"></Button>
+        <ComboBox x:Name="cbMekkora" Width="150" Height="25" HorizontalAlignment="Left" SelectionChanged="cbMekkora_SelectionChanged">
+            <ComboBoxItem IsSelected="True" Content="3" x:Name="cb3"></ComboBoxItem>
+            <ComboBoxItem Content="4" x:Name="cb4"></ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="btnKesz" Width="150" Height=" 25" Content="Kész" HorizontalAlignment="Right" Click="btnKesz_Click"></Button>
     </Grid>
 </Window>
